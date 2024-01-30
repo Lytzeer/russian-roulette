@@ -1,6 +1,5 @@
 from rich import print
 from random import randint, seed
-from time import sleep
 
 
 def shoot(barrels,bullet):
