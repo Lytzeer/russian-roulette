@@ -52,9 +52,10 @@ def main():
     bullet = randint(1, barrels)
     print("Russian Roulette")
     print("You have 6 barrels in front of you")
-    print("You have to shoot yourself in the head")
-    print("You can spin the barrel and shoot")
-    print("Good luck \n")
+    print("[blue]You have to shoot yourself in the head[/blue]")
+    print("[blue]You can spin the barrel and shoot[/blue]")
+    print("[red]Good luck[/red]")
+    print("[red]I hope you have life insurance[/red]\n")
     print(f"[yellow]Press enter to start...[yellow]")
     input()
     for i in range(barrels):
