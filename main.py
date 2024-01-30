@@ -2,6 +2,7 @@
 
 from random import randint, seed
 from rich import print
+from rich.panel import Panel
 
 
 def shoot(barrels, bullet):
@@ -49,17 +50,29 @@ def press_enter():
     input()
 
 
+def print_panel():
+    """Print panel"""
+    return Panel(
+        """[white]Russian Roulette
+You have 6 barrels in front of you
+You have to shoot yourself in the head
+You can spin the barrel and shoot
+Good luck
+I hope you have life insurance[/white]""",
+        title="[red]Russian Roulette[/red]",
+        subtitle="[purple]Made By : Lytzeer[/purple]",
+        border_style="blue",
+        title_align="left",
+        width=50,
+    )
+
+
 def main():
     """Main function"""
     seed()
     barrels = 6
     bullet = randint(1, barrels)
-    print("Russian Roulette")
-    print("You have 6 barrels in front of you")
-    print("[blue]You have to shoot yourself in the head[/blue]")
-    print("[blue]You can spin the barrel and shoot[/blue]")
-    print("[red]Good luck[/red]")
-    print("[red]I hope you have life insurance[/red]\n")
+    print(print_panel())
     print("[yellow]Press enter to start...[yellow]")
     input()
     for _ in range(barrels):
@@ -69,7 +82,7 @@ def main():
             break
         print_alive()
         barrels -= 1
-        print("Safe chambers left: [green]{barrels}[/green]")
+        print(f"Safe chambers left: [green]{barrels}[/green]")
         press_enter()
     if check_win(barrels):
         print_win()
