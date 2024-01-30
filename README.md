@@ -40,6 +40,6 @@ pip3 install -r requirements.txt
 python3 main.py
 ```
 
-## Crédits
+## Credits
 
 Game made by [Lytzeer](https://github.com/Lytzeer).
