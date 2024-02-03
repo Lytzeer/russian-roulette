@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This is the russian roulette game made in python
+This is the russian roulette game made in Python
 
 ## Installation
 
